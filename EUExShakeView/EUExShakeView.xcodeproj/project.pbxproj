@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7C0B3A71A54013C00796828 /* AnimationPauseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C0B39E1A54013C00796828 /* AnimationPauseViewController.m */; };
+		F7D77C471A58E005004F4499 /* EUExShakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D77C461A58E005004F4499 /* EUExShakeView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F7290DF41A53F5A2002C3CBB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F7290DF61A53F5A2002C3CBB /* libuexShakeView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexShakeView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C0B3921A53FF3700796828 /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
+		F7C0B3931A53FF3700796828 /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
+		F7C0B3941A53FF3700796828 /* WidgetOneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetOneDelegate.h; sourceTree = "<group>"; };
+		F7C0B39D1A54013C00796828 /* AnimationPauseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationPauseViewController.h; sourceTree = "<group>"; };
+		F7C0B39E1A54013C00796828 /* AnimationPauseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationPauseViewController.m; sourceTree = "<group>"; };
+		F7D1BE0C1A69FC7E0051CF50 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		F7D1BE0D1A69FC7E0051CF50 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
+		F7D1BE0E1A69FC7E0051CF50 /* MD5Digest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Digest.h; sourceTree = "<group>"; };
+		F7D1BE0F1A69FC7E0051CF50 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		F7D1BE101A69FC7E0051CF50 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		F7D1BE111A69FC7E0051CF50 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		F7D1BE121A69FC7E0051CF50 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		F7D1BE131A69FC7E0051CF50 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		F7D1BE141A69FC7E0051CF50 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		F7D77C451A58E005004F4499 /* EUExShakeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExShakeView.h; sourceTree = "<group>"; };
+		F7D77C461A58E005004F4499 /* EUExShakeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EUExShakeView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7290DF31A53F5A2002C3CBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7290DED1A53F5A2002C3CBB = {
+			isa = PBXGroup;
+			children = (
+				F7290DF81A53F5A2002C3CBB /* EUExShakeView */,
+				F7290DF71A53F5A2002C3CBB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7290DF71A53F5A2002C3CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7290DF61A53F5A2002C3CBB /* libuexShakeView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7290DF81A53F5A2002C3CBB /* EUExShakeView */ = {
+			isa = PBXGroup;
+			children = (
+				F7D1BE0B1A69FC7E0051CF50 /* JSON */,
+				F7D77C451A58E005004F4499 /* EUExShakeView.h */,
+				F7D77C461A58E005004F4499 /* EUExShakeView.m */,
+				F7C0B3981A54013C00796828 /* AnimationPause */,
+				F7C0B3901A53FE7200796828 /* engineHeader */,
+			);
+			path = EUExShakeView;
+			sourceTree = "<group>";
+		};
+		F7C0B3901A53FE7200796828 /* engineHeader */ = {
+			isa = PBXGroup;
+			children = (
+				F7C0B3921A53FF3700796828 /* EUExBase.h */,
+				F7C0B3931A53FF3700796828 /* EUtility.h */,
+				F7C0B3941A53FF3700796828 /* WidgetOneDelegate.h */,
+			);
+			path = engineHeader;
+			sourceTree = "<group>";
+		};
+		F7C0B3981A54013C00796828 /* AnimationPause */ = {
+			isa = PBXGroup;
+			children = (
+				F7C0B39D1A54013C00796828 /* AnimationPauseViewController.h */,
+				F7C0B39E1A54013C00796828 /* AnimationPauseViewController.m */,
+			);
+			path = AnimationPause;
+			sourceTree = "<group>";
+		};
+		F7D1BE0B1A69FC7E0051CF50 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F7D1BE0C1A69FC7E0051CF50 /* JSON.h */,
+				F7D1BE0D1A69FC7E0051CF50 /* JSONParser.h */,
+				F7D1BE0E1A69FC7E0051CF50 /* MD5Digest.h */,
+				F7D1BE0F1A69FC7E0051CF50 /* NSObject+SBJSON.h */,
+				F7D1BE101A69FC7E0051CF50 /* NSString+SBJSON.h */,
+				F7D1BE111A69FC7E0051CF50 /* SBJSON.h */,
+				F7D1BE121A69FC7E0051CF50 /* SBJsonBase.h */,
+				F7D1BE131A69FC7E0051CF50 /* SBJsonParser.h */,
+				F7D1BE141A69FC7E0051CF50 /* SBJsonWriter.h */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7290DF51A53F5A2002C3CBB /* EUExShakeView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7290E0A1A53F5A2002C3CBB /* Build configuration list for PBXNativeTarget "EUExShakeView" */;
+			buildPhases = (
+				F7290DF21A53F5A2002C3CBB /* Sources */,
+				F7290DF31A53F5A2002C3CBB /* Frameworks */,
+				F7290DF41A53F5A2002C3CBB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EUExShakeView;
+			productName = EUExShakeView;
+			productReference = F7290DF61A53F5A2002C3CBB /* libuexShakeView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7290DEE1A53F5A2002C3CBB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = AppCan.can;
+				TargetAttributes = {
+					F7290DF51A53F5A2002C3CBB = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = F7290DF11A53F5A2002C3CBB /* Build configuration list for PBXProject "EUExShakeView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F7290DED1A53F5A2002C3CBB;
+			productRefGroup = F7290DF71A53F5A2002C3CBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7290DF51A53F5A2002C3CBB /* EUExShakeView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7290DF21A53F5A2002C3CBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7D77C471A58E005004F4499 /* EUExShakeView.m in Sources */,
+				F7C0B3A71A54013C00796828 /* AnimationPauseViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F7290E081A53F5A2002C3CBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexShakeView/";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F7290E091A53F5A2002C3CBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexShakeView/";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7290E0B1A53F5A2002C3CBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = uexShakeView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F7290E0C1A53F5A2002C3CBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = uexShakeView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7290DF11A53F5A2002C3CBB /* Build configuration list for PBXProject "EUExShakeView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7290E081A53F5A2002C3CBB /* Debug */,
+				F7290E091A53F5A2002C3CBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7290E0A1A53F5A2002C3CBB /* Build configuration list for PBXNativeTarget "EUExShakeView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7290E0B1A53F5A2002C3CBB /* Debug */,
+				F7290E0C1A53F5A2002C3CBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7290DEE1A53F5A2002C3CBB /* Project object */;
+}
