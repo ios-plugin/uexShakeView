@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F7C0B3A71A54013C00796828 /* AnimationPauseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C0B39E1A54013C00796828 /* AnimationPauseViewController.m */; };
+		094CF1E51CC096FE006276A7 /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094CF1E41CC096FE006276A7 /* AnimationView.m */; };
 		F7D77C471A58E005004F4499 /* EUExShakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D77C461A58E005004F4499 /* EUExShakeView.m */; };
 /* End PBXBuildFile section */
 
@@ -24,12 +24,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0938EB241CB35FA9008DDBBC /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
+		0938EB251CB35FA9008DDBBC /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
+		0938EB261CB35FA9008DDBBC /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
+		094CF1E31CC096FE006276A7 /* AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationView.h; sourceTree = "<group>"; };
+		094CF1E41CC096FE006276A7 /* AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationView.m; sourceTree = "<group>"; };
 		F7290DF61A53F5A2002C3CBB /* libuexShakeView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexShakeView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7C0B3921A53FF3700796828 /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
-		F7C0B3931A53FF3700796828 /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
-		F7C0B3941A53FF3700796828 /* WidgetOneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetOneDelegate.h; sourceTree = "<group>"; };
-		F7C0B39D1A54013C00796828 /* AnimationPauseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationPauseViewController.h; sourceTree = "<group>"; };
-		F7C0B39E1A54013C00796828 /* AnimationPauseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationPauseViewController.m; sourceTree = "<group>"; };
 		F7D1BE0C1A69FC7E0051CF50 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		F7D1BE0D1A69FC7E0051CF50 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
 		F7D1BE0E1A69FC7E0051CF50 /* MD5Digest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Digest.h; sourceTree = "<group>"; };
@@ -54,6 +54,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0938EB231CB35FA9008DDBBC /* engineHeader */ = {
+			isa = PBXGroup;
+			children = (
+				0938EB241CB35FA9008DDBBC /* EUExBase.h */,
+				0938EB251CB35FA9008DDBBC /* EUExBaseDefine.h */,
+				0938EB261CB35FA9008DDBBC /* EUtility.h */,
+			);
+			path = engineHeader;
+			sourceTree = "<group>";
+		};
 		F7290DED1A53F5A2002C3CBB = {
 			isa = PBXGroup;
 			children = (
@@ -77,26 +87,16 @@
 				F7D77C451A58E005004F4499 /* EUExShakeView.h */,
 				F7D77C461A58E005004F4499 /* EUExShakeView.m */,
 				F7C0B3981A54013C00796828 /* AnimationPause */,
-				F7C0B3901A53FE7200796828 /* engineHeader */,
+				0938EB231CB35FA9008DDBBC /* engineHeader */,
 			);
 			path = EUExShakeView;
-			sourceTree = "<group>";
-		};
-		F7C0B3901A53FE7200796828 /* engineHeader */ = {
-			isa = PBXGroup;
-			children = (
-				F7C0B3921A53FF3700796828 /* EUExBase.h */,
-				F7C0B3931A53FF3700796828 /* EUtility.h */,
-				F7C0B3941A53FF3700796828 /* WidgetOneDelegate.h */,
-			);
-			path = engineHeader;
 			sourceTree = "<group>";
 		};
 		F7C0B3981A54013C00796828 /* AnimationPause */ = {
 			isa = PBXGroup;
 			children = (
-				F7C0B39D1A54013C00796828 /* AnimationPauseViewController.h */,
-				F7C0B39E1A54013C00796828 /* AnimationPauseViewController.m */,
+				094CF1E31CC096FE006276A7 /* AnimationView.h */,
+				094CF1E41CC096FE006276A7 /* AnimationView.m */,
 			);
 			path = AnimationPause;
 			sourceTree = "<group>";
@@ -173,8 +173,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				094CF1E51CC096FE006276A7 /* AnimationView.m in Sources */,
 				F7D77C471A58E005004F4499 /* EUExShakeView.m in Sources */,
-				F7C0B3A71A54013C00796828 /* AnimationPauseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

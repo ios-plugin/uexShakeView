@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "EUExBase.h"
 #import "JSON.h"
-#import "AnimationPauseViewController.h"
+#import "AnimationView.h"
 #import <QuartzCore/QuartzCore.h>
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface EUExShakeView : EUExBase
 
-@property (nonatomic, retain) AnimationPauseViewController *AVC;
+//@property (nonatomic, retain) AnimationView *animationView;
+//@property (nonatomic,assign) dispatch_queue_t callBackDispatchQueue;
 
 @end

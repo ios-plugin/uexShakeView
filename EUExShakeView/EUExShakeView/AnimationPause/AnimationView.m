@@ -1,15 +1,14 @@
 //
-//  AnimationPauseViewController.m
-//  AnimationPause
+//  AnimationView.m
+//  EUExShakeView
 //
-//  Created by gamy on 12-1-5.
-//  Copyright 2012年 __MyCompanyName__. All rights reserved.
+//  Created by 杨广 on 16/4/15.
+//  Copyright © 2016年 AppCan.can. All rights reserved.
 //
 
-#import "AnimationPauseViewController.h"
+#import "AnimationView.h"
 #import "EUtility.h"
-
-@implementation AnimationPauseViewController{
+@implementation AnimationView{
     CGPoint bgViewPoint;
     float moveY;
     float moveX;
@@ -17,15 +16,58 @@
 //添加
 @synthesize imgUp;
 @synthesize imgDown;
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
++ (id)sharedInstance {
+    //创建一个静态的空的单例对象
+    static AnimationView *sharedDataCenter = nil;
+    //声明一个静态的gcd的单次任务
+    static dispatch_once_t onceToken;
+    //执行单次任务；
+    dispatch_once(&onceToken, ^{
+        //对对象进行初始化
+        sharedDataCenter = [[self alloc] init];
+    });
     
-    // Release any cached data, images, etc that aren't in use.
+    return sharedDataCenter;
 }
 
+
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+-(id)init{
+    if ( self = [super init]) {
+        [self becomeFirstResponder];
+        self.userInteractionEnabled = YES;
+        float width = [[self.frameDict objectForKey:@"w"] floatValue];
+        float heigh = [[self.frameDict objectForKey:@"h"] floatValue];
+        
+        if (width <= 0||width>[EUtility screenWidth]) {
+            width = [EUtility screenWidth];
+        }
+        if (heigh <= 0||heigh>[EUtility screenHeight]) {
+            heigh = [EUtility screenHeight];
+        }
+        
+        UIImageView *bgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, heigh)];
+        bgView.image = [self imagesNamedFromCustomBundle:@"ShakeHideImg_women"];
+        [self addSubview:bgView];
+        UIView *view = [[UIView alloc] init];
+        view.frame = CGRectMake(width/4, heigh/4, width/2, heigh/2);
+        [bgView addSubview:view];
+        NSString *path = [[EUtility bundleForPlugin:@"uexShakeView"] pathForResource:@"shake" ofType:@"wav"];
+        AudioServicesCreateSystemSoundID((CFURLRef)[NSURL fileURLWithPath:path], &soundID);
+        imgUp = [[UIImageView alloc] initWithFrame:CGRectMake(0, -10, width/2, heigh/4)];
+        imgUp.image = [self imagesNamedFromCustomBundle:@"Shake_Logo_Up"];//[UIImage imageNamed:@"uexShakeView/Shake_Logo_Up"];
+        [view addSubview:imgUp];
+        imgDown = [[UIImageView alloc] initWithFrame:CGRectMake(0,  heigh/4-10, width/2,heigh/4)];
+        imgDown.image = [self imagesNamedFromCustomBundle:@"Shake_Logo_Down"];//[UIImage imageNamed:@"uexShakeView/Shake_Logo_Down"];
+        [view addSubview:imgDown];
+        moveX = imgUp.center.x;
+        moveY = heigh/4;
+        
+        
+    }
+    return self;
+}
 //添加
 #pragma mark - 摇一摇动画效果
 - (void)addAnimations
@@ -77,106 +119,57 @@
     translation3.fillMode = kCAFillModeForwards;
     [imgDown.layer addAnimation:groupDown forKey:nil];
     [imgUp.layer addAnimation:groupUp forKey:nil];
+    NSLog(@"我被执行了");
 }
 
 #pragma mark - 摇一摇
 //onShake
 -(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
+    //[self becomeFirstResponder];
+    
     //  NSLog(@"begin");
 }
 
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
-    
+    // [self callBackJsonWithFunction:@"onShake"];
     if(motion==UIEventSubtypeMotionShake)
     {
-        //添加
-        [self addAnimations];
-        //添加
-        AudioServicesPlaySystemSound (soundID);
+        //[self becomeFirstResponder];
+            [self addAnimations];
+            NSLog(@"addAnimations:%@", [NSThread currentThread]);
+            //添加
+            AudioServicesPlaySystemSound (soundID);
+       
     }
     [self performSelector:@selector(motionEndAfter) withObject:self afterDelay:1.0];
+    
+   
 }
 
 - (void)motionEndAfter {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"uexShakeView/shake_match" ofType:@"wav"];
+    [self becomeFirstResponder];
+    //AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    NSString *path = [[EUtility bundleForPlugin:@"uexShakeView"] pathForResource:@"shake_match" ofType:@"wav"];
     AudioServicesCreateSystemSoundID((CFURLRef)[NSURL fileURLWithPath:path], &soundIDAfter);
-    AudioServicesPlaySystemSound (soundIDAfter);
     [[NSNotificationCenter defaultCenter]postNotificationName:@"onShake" object:self];
+    AudioServicesPlaySystemSound (soundIDAfter);
     
 }
-
-//添加
--(void)dealloc{
-    [imgDown release];
-    [imgUp release];
-    [super dealloc];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    //float x = [[self.frameDict objectForKey:@"x"] floatValue];
-    //float y = [[self.frameDict objectForKey:@"y"] floatValue];
-    float width = [[self.frameDict objectForKey:@"w"] floatValue];
-    float heigh = [[self.frameDict objectForKey:@"h"] floatValue];
-    
-    if (width <= 0||width>[EUtility screenWidth]) {
-        width = [EUtility screenWidth];
-    }
-    if (heigh <= 0||heigh>[EUtility screenHeight]) {
-        heigh = [EUtility screenHeight];
-    }
-    
-    UIImageView *bgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, heigh)];
-    bgView.image = [UIImage imageNamed:@"uexShakeView/ShakeHideImg_women.png"];
-    [self.view addSubview:bgView];
-    UIView *view = [[UIView alloc] init];
-    view.frame = CGRectMake(width/4, heigh/4, width/2, heigh/2);
-    [bgView addSubview:view];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"uexShakeView/shake" ofType:@"wav"];
-    AudioServicesCreateSystemSoundID((CFURLRef)[NSURL fileURLWithPath:path], &soundID);
-    imgUp = [[UIImageView alloc] initWithFrame:CGRectMake(0, -10, width/2, heigh/4)];
-    imgUp.image = [UIImage imageNamed:@"uexShakeView/Shake_Logo_Up"];
-    [view addSubview:imgUp];
-    imgDown = [[UIImageView alloc] initWithFrame:CGRectMake(0,  heigh/4-10, width/2,heigh/4)];
-    imgDown.image = [UIImage imageNamed:@"uexShakeView/Shake_Logo_Down"];
-    [view addSubview:imgDown];
-    moveX = imgUp.center.x;
-    moveY = heigh/4;
-    [bgView release];
-    [view release];
-}
-
 - (BOOL)canBecomeFirstResponder
 {
     return YES;// default is NO
 }
-
--(void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [self becomeFirstResponder];
+- (BOOL)canResignFirstResponder{
+    return NO;
 }
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [self resignFirstResponder];
-}
-
-- (void)viewDidUnload
+- (UIImage *)imagesNamedFromCustomBundle:(NSString *)imgName
 {
     
-    [super viewDidUnload];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-- (BOOL)shouldAutorotate {
-    
-    return  NO;
+    NSBundle *bundle = [EUtility bundleForPlugin:@"uexShakeView"];
+    NSString *img_path = [[bundle resourcePath]stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",imgName]];
+    return [UIImage imageWithContentsOfFile:img_path];
 }
 @end
+
+
