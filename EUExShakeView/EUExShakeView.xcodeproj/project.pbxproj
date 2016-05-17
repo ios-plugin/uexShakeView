@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		094CF1E51CC096FE006276A7 /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094CF1E41CC096FE006276A7 /* AnimationView.m */; };
+		09E3E0571CEAFF9F007742A9 /* shake.wav in Resources */ = {isa = PBXBuildFile; fileRef = 09E3E04C1CEAFF9F007742A9 /* shake.wav */; };
+		09E3E0581CEAFF9F007742A9 /* Shake_Logo_Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E3E04D1CEAFF9F007742A9 /* Shake_Logo_Down@2x.png */; };
+		09E3E0591CEAFF9F007742A9 /* Shake_Logo_Female_Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E3E04E1CEAFF9F007742A9 /* Shake_Logo_Female_Down@2x.png */; };
+		09E3E05A1CEAFF9F007742A9 /* Shake_Logo_Female_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E3E04F1CEAFF9F007742A9 /* Shake_Logo_Female_Up@2x.png */; };
+		09E3E05B1CEAFF9F007742A9 /* Shake_Logo_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E3E0501CEAFF9F007742A9 /* Shake_Logo_Up@2x.png */; };
+		09E3E05C1CEAFF9F007742A9 /* shake_match.wav in Resources */ = {isa = PBXBuildFile; fileRef = 09E3E0511CEAFF9F007742A9 /* shake_match.wav */; };
+		09E3E05D1CEAFF9F007742A9 /* ShakeHideImg_women@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E3E0521CEAFF9F007742A9 /* ShakeHideImg_women@2x.png */; };
+		09E3E05E1CEAFF9F007742A9 /* white_down2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E3E0531CEAFF9F007742A9 /* white_down2x.png */; };
+		09E3E05F1CEAFF9F007742A9 /* white_down3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E3E0541CEAFF9F007742A9 /* white_down3x.png */; };
+		09E3E0601CEAFF9F007742A9 /* white_up2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E3E0551CEAFF9F007742A9 /* white_up2x.png */; };
+		09E3E0611CEAFF9F007742A9 /* white_up3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E3E0561CEAFF9F007742A9 /* white_up3x.png */; };
 		F7D77C471A58E005004F4499 /* EUExShakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D77C461A58E005004F4499 /* EUExShakeView.m */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +36,7 @@
 		F7290DF41A53F5A2002C3CBB /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
+			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
 			);
@@ -40,6 +51,17 @@
 		094CF1E31CC096FE006276A7 /* AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationView.h; sourceTree = "<group>"; };
 		094CF1E41CC096FE006276A7 /* AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationView.m; sourceTree = "<group>"; };
 		09E3E0171CEAF88B007742A9 /* uexShakeView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uexShakeView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E3E04C1CEAFF9F007742A9 /* shake.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake.wav; sourceTree = "<group>"; };
+		09E3E04D1CEAFF9F007742A9 /* Shake_Logo_Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Logo_Down@2x.png"; sourceTree = "<group>"; };
+		09E3E04E1CEAFF9F007742A9 /* Shake_Logo_Female_Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Logo_Female_Down@2x.png"; sourceTree = "<group>"; };
+		09E3E04F1CEAFF9F007742A9 /* Shake_Logo_Female_Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Logo_Female_Up@2x.png"; sourceTree = "<group>"; };
+		09E3E0501CEAFF9F007742A9 /* Shake_Logo_Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Logo_Up@2x.png"; sourceTree = "<group>"; };
+		09E3E0511CEAFF9F007742A9 /* shake_match.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake_match.wav; sourceTree = "<group>"; };
+		09E3E0521CEAFF9F007742A9 /* ShakeHideImg_women@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ShakeHideImg_women@2x.png"; sourceTree = "<group>"; };
+		09E3E0531CEAFF9F007742A9 /* white_down2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_down2x.png; sourceTree = "<group>"; };
+		09E3E0541CEAFF9F007742A9 /* white_down3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_down3x.png; sourceTree = "<group>"; };
+		09E3E0551CEAFF9F007742A9 /* white_up2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_up2x.png; sourceTree = "<group>"; };
+		09E3E0561CEAFF9F007742A9 /* white_up3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_up3x.png; sourceTree = "<group>"; };
 		F7290DF61A53F5A2002C3CBB /* libuexShakeView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexShakeView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D1BE0C1A69FC7E0051CF50 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		F7D1BE0D1A69FC7E0051CF50 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
@@ -82,18 +104,29 @@
 			path = engineHeader;
 			sourceTree = "<group>";
 		};
-		09E3E0181CEAF88B007742A9 /* uexShakeView */ = {
+		09E3E04B1CEAFF9F007742A9 /* uexShakeViewBundle */ = {
 			isa = PBXGroup;
 			children = (
+				09E3E04C1CEAFF9F007742A9 /* shake.wav */,
+				09E3E04D1CEAFF9F007742A9 /* Shake_Logo_Down@2x.png */,
+				09E3E04E1CEAFF9F007742A9 /* Shake_Logo_Female_Down@2x.png */,
+				09E3E04F1CEAFF9F007742A9 /* Shake_Logo_Female_Up@2x.png */,
+				09E3E0501CEAFF9F007742A9 /* Shake_Logo_Up@2x.png */,
+				09E3E0511CEAFF9F007742A9 /* shake_match.wav */,
+				09E3E0521CEAFF9F007742A9 /* ShakeHideImg_women@2x.png */,
+				09E3E0531CEAFF9F007742A9 /* white_down2x.png */,
+				09E3E0541CEAFF9F007742A9 /* white_down3x.png */,
+				09E3E0551CEAFF9F007742A9 /* white_up2x.png */,
+				09E3E0561CEAFF9F007742A9 /* white_up3x.png */,
 			);
-			path = uexShakeView;
+			path = uexShakeViewBundle;
 			sourceTree = "<group>";
 		};
 		F7290DED1A53F5A2002C3CBB = {
 			isa = PBXGroup;
 			children = (
 				F7290DF81A53F5A2002C3CBB /* EUExShakeView */,
-				09E3E0181CEAF88B007742A9 /* uexShakeView */,
+				09E3E04B1CEAFF9F007742A9 /* uexShakeViewBundle */,
 				F7290DF71A53F5A2002C3CBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -222,6 +255,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E3E0581CEAFF9F007742A9 /* Shake_Logo_Down@2x.png in Resources */,
+				09E3E05A1CEAFF9F007742A9 /* Shake_Logo_Female_Up@2x.png in Resources */,
+				09E3E0601CEAFF9F007742A9 /* white_up2x.png in Resources */,
+				09E3E05F1CEAFF9F007742A9 /* white_down3x.png in Resources */,
+				09E3E0591CEAFF9F007742A9 /* Shake_Logo_Female_Down@2x.png in Resources */,
+				09E3E05B1CEAFF9F007742A9 /* Shake_Logo_Up@2x.png in Resources */,
+				09E3E0571CEAFF9F007742A9 /* shake.wav in Resources */,
+				09E3E0611CEAFF9F007742A9 /* white_up3x.png in Resources */,
+				09E3E05E1CEAFF9F007742A9 /* white_down2x.png in Resources */,
+				09E3E05C1CEAFF9F007742A9 /* shake_match.wav in Resources */,
+				09E3E05D1CEAFF9F007742A9 /* ShakeHideImg_women@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +306,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = NO;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexShakeView";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -283,6 +328,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = NO;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexShakeView";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
