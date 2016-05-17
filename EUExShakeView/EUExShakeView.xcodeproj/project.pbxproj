@@ -11,6 +11,16 @@
 		F7D77C471A58E005004F4499 /* EUExShakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D77C461A58E005004F4499 /* EUExShakeView.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		09E3E01D1CEAFAAE007742A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7290DEE1A53F5A2002C3CBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09E3E0161CEAF88B007742A9;
+			remoteInfo = uexShakeView;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		F7290DF41A53F5A2002C3CBB /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -29,6 +39,7 @@
 		0938EB261CB35FA9008DDBBC /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
 		094CF1E31CC096FE006276A7 /* AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationView.h; sourceTree = "<group>"; };
 		094CF1E41CC096FE006276A7 /* AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationView.m; sourceTree = "<group>"; };
+		09E3E0171CEAF88B007742A9 /* uexShakeView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uexShakeView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7290DF61A53F5A2002C3CBB /* libuexShakeView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexShakeView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D1BE0C1A69FC7E0051CF50 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		F7D1BE0D1A69FC7E0051CF50 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
@@ -44,6 +55,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		09E3E0141CEAF88B007742A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7290DF31A53F5A2002C3CBB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,10 +82,18 @@
 			path = engineHeader;
 			sourceTree = "<group>";
 		};
+		09E3E0181CEAF88B007742A9 /* uexShakeView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = uexShakeView;
+			sourceTree = "<group>";
+		};
 		F7290DED1A53F5A2002C3CBB = {
 			isa = PBXGroup;
 			children = (
 				F7290DF81A53F5A2002C3CBB /* EUExShakeView */,
+				09E3E0181CEAF88B007742A9 /* uexShakeView */,
 				F7290DF71A53F5A2002C3CBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				F7290DF61A53F5A2002C3CBB /* libuexShakeView.a */,
+				09E3E0171CEAF88B007742A9 /* uexShakeView.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +147,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		09E3E0161CEAF88B007742A9 /* uexShakeView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E3E01C1CEAF88B007742A9 /* Build configuration list for PBXNativeTarget "uexShakeView" */;
+			buildPhases = (
+				09E3E0131CEAF88B007742A9 /* Sources */,
+				09E3E0141CEAF88B007742A9 /* Frameworks */,
+				09E3E0151CEAF88B007742A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = uexShakeView;
+			productName = uexShakeView;
+			productReference = 09E3E0171CEAF88B007742A9 /* uexShakeView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		F7290DF51A53F5A2002C3CBB /* EUExShakeView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7290E0A1A53F5A2002C3CBB /* Build configuration list for PBXNativeTarget "EUExShakeView" */;
@@ -131,6 +175,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				09E3E01E1CEAFAAE007742A9 /* PBXTargetDependency */,
 			);
 			name = EUExShakeView;
 			productName = EUExShakeView;
@@ -146,6 +191,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = AppCan.can;
 				TargetAttributes = {
+					09E3E0161CEAF88B007742A9 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					F7290DF51A53F5A2002C3CBB = {
 						CreatedOnToolsVersion = 6.1;
 					};
@@ -164,11 +212,29 @@
 			projectRoot = "";
 			targets = (
 				F7290DF51A53F5A2002C3CBB /* EUExShakeView */,
+				09E3E0161CEAF88B007742A9 /* uexShakeView */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		09E3E0151CEAF88B007742A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		09E3E0131CEAF88B007742A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7290DF21A53F5A2002C3CBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,7 +246,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		09E3E01E1CEAFAAE007742A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09E3E0161CEAF88B007742A9 /* uexShakeView */;
+			targetProxy = 09E3E01D1CEAFAAE007742A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		09E3E01A1CEAF88B007742A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = TRyangguang.uexShakeView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		09E3E01B1CEAF88B007742A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = TRyangguang.uexShakeView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		F7290E081A53F5A2002C3CBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -282,6 +398,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		09E3E01C1CEAF88B007742A9 /* Build configuration list for PBXNativeTarget "uexShakeView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E3E01A1CEAF88B007742A9 /* Debug */,
+				09E3E01B1CEAF88B007742A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F7290DF11A53F5A2002C3CBB /* Build configuration list for PBXProject "EUExShakeView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
