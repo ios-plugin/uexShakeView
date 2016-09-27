@@ -16,12 +16,12 @@
     UIImageView *imgDown;
     SystemSoundID soundID;
     SystemSoundID soundIDAfter;
-    UIActivityIndicatorView *aiLoad;
+    
 }
 @property(nonatomic, retain) UIImageView *imgUp;
 @property(nonatomic, retain) UIImageView *imgDown;
-@property(nonatomic, retain) NSMutableDictionary *frameDict;
+
 //添加
 - (void)addAnimations;
-+ (id)sharedInstance;
+
 @end

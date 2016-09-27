@@ -422,7 +422,7 @@
 		F7290E0B1A53F5A2002C3CBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = uexShakeView;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
@@ -433,7 +433,7 @@
 		F7290E0C1A53F5A2002C3CBB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = uexShakeView;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
