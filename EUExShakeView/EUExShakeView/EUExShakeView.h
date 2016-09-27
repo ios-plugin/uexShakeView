@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EUExBase.h"
-#import "JSON.h"
+#import <AppCanKit/AppCanKit.h>
 #import "AnimationView.h"
 #import <QuartzCore/QuartzCore.h>
 #import <AudioToolbox/AudioToolbox.h>

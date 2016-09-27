@@ -9,19 +9,12 @@
 #import "EUExShakeView.h"
 #import "EUtility.h"
 @interface EUExShakeView ()
-@property(nonatomic, retain) NSMutableDictionary *frameDict;
+@property(nonatomic, retain) NSDictionary *frameDict;
 @end
 static AnimationView *animationView = nil;
 @implementation EUExShakeView {
     
     BOOL currenOpenStaus;
-}
--(id)initWithBrwView:(EBrowserView *) eInBrwView {
-    self = [super initWithBrwView:eInBrwView];
-    if (self) {
-        
-    }
-    return self;
 }
 - (void)open:(NSMutableArray *) inArguments {
     if (currenOpenStaus) {
@@ -33,10 +26,9 @@ static AnimationView *animationView = nil;
                                               object:nil];
     
     
-    NSString *jsonStr = nil;
     if (inArguments.count > 0) {
-        jsonStr = [inArguments objectAtIndex:0];
-        self.frameDict = [jsonStr JSONValue];
+        ACArgsUnpack(NSDictionary *dic) = inArguments;
+        self.frameDict = dic;
         
     } else {
         
@@ -56,7 +48,7 @@ static AnimationView *animationView = nil;
     }
     animationView = [[AnimationView alloc]initWithFrame:CGRectMake(x, y, width, heigh)];
     [animationView becomeFirstResponder];
-    [EUtility brwView:self.meBrwView addSubview:animationView];
+    [[self.webViewEngine webView] addSubview:animationView];
     currenOpenStaus = YES;
 }
 
@@ -74,14 +66,14 @@ static AnimationView *animationView = nil;
 }
 - (void) onShakeView:(NSNotification *)notification {
     
-    [self callBackJsonWithFunction:@"onShake"];
+    [self callBack];
     
     
 }
 const static NSString *kPluginName=@"uexShakeView";
--(void)callBackJsonWithFunction:(NSString *)functionName {
-    NSString *jsonStr = [NSString stringWithFormat:@"if(%@.%@ != null){%@.%@();}",kPluginName,functionName,kPluginName,functionName];
-    [EUtility brwView:self.meBrwView evaluateScript:jsonStr];
+-(void)callBack{
+    [self.webViewEngine callbackWithFunctionKeyPath:@"uexShakeView.onShake" arguments:nil];
+    
     
 }
 @end

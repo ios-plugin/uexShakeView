@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EUExBase.h"
 #import <QuartzCore/QuartzCore.h>
 #import <AudioToolbox/AudioToolbox.h>
 @interface AnimationView : UIView{
