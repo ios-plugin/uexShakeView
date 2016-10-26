@@ -54,7 +54,13 @@ static AnimationView *animationView = nil;
     if (heigh <= 0||heigh>[EUtility screenHeight]) {
         heigh = [EUtility screenHeight];
     }
-    animationView = [[AnimationView alloc]initWithFrame:CGRectMake(x, y, width, heigh)];
+    NSLog(@"imagePath:%@",[EUtility getAbsPath:self.meBrwView path:self.frameDict[@"backgroundImagePath"]]);
+    NSString* backgroundImagePath =self.frameDict[@"backgroundImagePath"]? [EUtility getAbsPath:self.meBrwView path:self.frameDict[@"backgroundImagePath"]]:nil;
+    NSString* upImagePath = self.frameDict[@"upImagePath"]?[EUtility getAbsPath:self.meBrwView path:self.frameDict[@"upImagePath"]]:nil;
+    NSString* downImagePath = self.frameDict[@"downImagePath"]?[EUtility getAbsPath:self.meBrwView path:self.frameDict[@"downImagePath"]]:nil;
+    if (!animationView) {
+        animationView = [[AnimationView alloc]initWithFrame:CGRectMake(x, y, width, heigh) backgroundImagePath:backgroundImagePath upImagePath:upImagePath downImagePath:downImagePath];
+    }
     [animationView becomeFirstResponder];
     [EUtility brwView:self.meBrwView addSubview:animationView];
     currenOpenStaus = YES;
@@ -66,7 +72,6 @@ static AnimationView *animationView = nil;
     if (animationView) {
         [animationView resignFirstResponder];
         [animationView removeFromSuperview];
-        animationView = nil;
         [[NSNotificationCenter defaultCenter] removeObserver:self];
         currenOpenStaus = NO;
         
