@@ -46,7 +46,14 @@ static AnimationView *animationView = nil;
     if (heigh <= 0||heigh>[EUtility screenHeight]) {
         heigh = [EUtility screenHeight];
     }
-    animationView = [[AnimationView alloc]initWithFrame:CGRectMake(x, y, width, heigh)];
+    
+    NSString* backgroundImagePath =self.frameDict[@"backgroundImagePath"]? [self absPath:self.frameDict[@"backgroundImagePath"]]:nil;
+    NSString* upImagePath = self.frameDict[@"upImagePath"]?[self absPath:self.frameDict[@"upImagePath"]]:nil;
+    NSString* downImagePath = self.frameDict[@"downImagePath"]?[self absPath:self.frameDict[@"downImagePath"]]:nil;
+    if (!animationView) {
+        animationView = [[AnimationView alloc]initWithFrame:CGRectMake(x, y, width, heigh) backgroundImagePath:backgroundImagePath upImagePath:upImagePath downImagePath:downImagePath];
+    }
+
     [animationView becomeFirstResponder];
     [[self.webViewEngine webView] addSubview:animationView];
     currenOpenStaus = YES;
@@ -58,7 +65,6 @@ static AnimationView *animationView = nil;
     if (animationView) {
         [animationView resignFirstResponder];
         [animationView removeFromSuperview];
-        animationView = nil;
         [[NSNotificationCenter defaultCenter] removeObserver:self];
         currenOpenStaus = NO;
         
