@@ -21,7 +21,7 @@
 @property(nonatomic, retain) UIImageView *imgDown;
 
 //添加
--(id)initWithFrame:(CGRect)frame backgroundImagePath:(NSString*)backgroundImagePath upImagePath:(NSString*)upImagePath downImagePath:(NSString*)downImagePath;
+-(id)initWithFrame:(CGRect)frame backgroundImagePath:(NSString*)backgroundImagePath upImagePath:(NSString*)upImagePath downImagePath:(NSString*)downImagePath imageWidth:(CGFloat)imageWidth imageHeight:(CGFloat)imageHeight;
 - (void)addAnimations;
 
 @end

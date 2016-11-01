@@ -40,6 +40,8 @@ static AnimationView *animationView = nil;
     float y = [[self.frameDict objectForKey:@"y"] floatValue];
     float width = [[self.frameDict objectForKey:@"w"] floatValue];
     float heigh = [[self.frameDict objectForKey:@"h"] floatValue];
+    float imageWidth = self.frameDict[@"imageWidth"]?[[self.frameDict objectForKey:@"imageWidth"] floatValue]:0;
+    float imageHeight = self.frameDict[@"imageHeight"]?[[self.frameDict objectForKey:@"imageHeight"] floatValue]:0;
     if (width <= 0||width>[EUtility screenWidth]) {
         width = [EUtility screenWidth];
     }
@@ -51,7 +53,7 @@ static AnimationView *animationView = nil;
     NSString* upImagePath = self.frameDict[@"upImagePath"]?[self absPath:self.frameDict[@"upImagePath"]]:nil;
     NSString* downImagePath = self.frameDict[@"downImagePath"]?[self absPath:self.frameDict[@"downImagePath"]]:nil;
     if (!animationView) {
-        animationView = [[AnimationView alloc]initWithFrame:CGRectMake(x, y, width, heigh) backgroundImagePath:backgroundImagePath upImagePath:upImagePath downImagePath:downImagePath];
+        animationView = [[AnimationView alloc]initWithFrame:CGRectMake(x, y, width, heigh) backgroundImagePath:backgroundImagePath upImagePath:upImagePath downImagePath:downImagePath imageWidth:imageWidth imageHeight:imageHeight];
     }
 
     [animationView becomeFirstResponder];

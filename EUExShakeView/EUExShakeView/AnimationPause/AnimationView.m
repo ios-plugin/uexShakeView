@@ -15,7 +15,7 @@
 }
 @synthesize imgUp;
 @synthesize imgDown;
--(id)initWithFrame:(CGRect)frame backgroundImagePath:(NSString*)backgroundImagePath upImagePath:(NSString*)upImagePath downImagePath:(NSString*)downImagePath{
+-(id)initWithFrame:(CGRect)frame backgroundImagePath:(NSString*)backgroundImagePath upImagePath:(NSString*)upImagePath downImagePath:(NSString*)downImagePath imageWidth:(CGFloat)imageWidth imageHeight:(CGFloat)imageHeight{
     if ( self = [super initWithFrame:frame]) {
         [self becomeFirstResponder];
         self.userInteractionEnabled = YES;
@@ -33,11 +33,17 @@
         [self addSubview:bgView];
         UIView *view = [[UIView alloc] init];
         NSLog(@"height:%f",heigh);
-        view.frame = CGRectMake(width/4,  heigh/4, width/2, heigh/2);
+        if (imageWidth !=0 && imageHeight !=0) {
+            view.frame = CGRectMake(0,  0, imageWidth, imageHeight);
+            view.center = bgView.center;
+        }else{
+            view.frame = CGRectMake(width/4,  heigh/4, width/2, heigh/2);
+        }
+        
         [bgView addSubview:view];
         NSString *path = [[EUtility bundleForPlugin:@"uexShakeView"] pathForResource:@"shake" ofType:@"wav"];
         AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:path], &soundID);
-        imgUp = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width/2, heigh/4)];
+        imgUp = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, view.frame.size.width, view.frame.size.height/2)];
         if (upImagePath) {
             imgUp.image = [UIImage imageWithContentsOfFile:upImagePath];
         }else{
@@ -45,7 +51,7 @@
         }
         
         [view addSubview:imgUp];
-        imgDown = [[UIImageView alloc] initWithFrame:CGRectMake(0,  heigh/4, width/2,heigh/4)];
+        imgDown = [[UIImageView alloc] initWithFrame:CGRectMake(0,  view.frame.size.height/2, view.frame.size.width,view.frame.size.height/2)];
         if (downImagePath) {
             imgDown.image = [UIImage imageWithContentsOfFile:downImagePath];
         }else{
@@ -54,7 +60,7 @@
         
         [view addSubview:imgDown];
         moveX = imgUp.center.x;
-        moveY = heigh/4;
+        moveY = view.frame.size.height/2;
         
         
     }
