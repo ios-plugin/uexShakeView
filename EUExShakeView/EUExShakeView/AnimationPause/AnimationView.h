@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EUExBase.h"
 #import <QuartzCore/QuartzCore.h>
 #import <AudioToolbox/AudioToolbox.h>
 @interface AnimationView : UIView{
@@ -23,7 +22,11 @@
 
 
 //添加
+<<<<<<< HEAD
 -(id)initWithFrame:(CGRect)frame backgroundImagePath:(NSString*)backgroundImagePath upImagePath:(NSString*)upImagePath downImagePath:(NSString*)downImagePath;
+=======
+-(id)initWithFrame:(CGRect)frame backgroundImagePath:(NSString*)backgroundImagePath upImagePath:(NSString*)upImagePath downImagePath:(NSString*)downImagePath imageWidth:(CGFloat)imageWidth imageHeight:(CGFloat)imageHeight;
+>>>>>>> origin/dev-4.0
 - (void)addAnimations;
 
 @end

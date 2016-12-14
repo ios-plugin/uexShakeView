@@ -19,6 +19,7 @@
 		090700DA1CEB378F0017C562 /* white_up2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 090700CF1CEB378F0017C562 /* white_up2x.png */; };
 		090700DB1CEB378F0017C562 /* white_up3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 090700D01CEB378F0017C562 /* white_up3x.png */; };
 		094CF1E51CC096FE006276A7 /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094CF1E41CC096FE006276A7 /* AnimationView.m */; };
+		21667F781D9A37C200F54C5D /* AppCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21667F771D9A37C200F54C5D /* AppCanKit.framework */; };
 		F7D77C471A58E005004F4499 /* EUExShakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D77C461A58E005004F4499 /* EUExShakeView.m */; };
 /* End PBXBuildFile section */
 
@@ -57,21 +58,12 @@
 		090700CE1CEB378F0017C562 /* white_down3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_down3x.png; sourceTree = "<group>"; };
 		090700CF1CEB378F0017C562 /* white_up2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_up2x.png; sourceTree = "<group>"; };
 		090700D01CEB378F0017C562 /* white_up3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_up3x.png; sourceTree = "<group>"; };
-		0938EB241CB35FA9008DDBBC /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
 		0938EB251CB35FA9008DDBBC /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
 		0938EB261CB35FA9008DDBBC /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
 		094CF1E31CC096FE006276A7 /* AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationView.h; sourceTree = "<group>"; };
 		094CF1E41CC096FE006276A7 /* AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationView.m; sourceTree = "<group>"; };
+		21667F771D9A37C200F54C5D /* AppCanKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCanKit.framework; sourceTree = "<group>"; };
 		F7290DF61A53F5A2002C3CBB /* libuexShakeView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexShakeView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7D1BE0C1A69FC7E0051CF50 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		F7D1BE0D1A69FC7E0051CF50 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
-		F7D1BE0E1A69FC7E0051CF50 /* MD5Digest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Digest.h; sourceTree = "<group>"; };
-		F7D1BE0F1A69FC7E0051CF50 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		F7D1BE101A69FC7E0051CF50 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
-		F7D1BE111A69FC7E0051CF50 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
-		F7D1BE121A69FC7E0051CF50 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
-		F7D1BE131A69FC7E0051CF50 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		F7D1BE141A69FC7E0051CF50 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		F7D77C451A58E005004F4499 /* EUExShakeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExShakeView.h; sourceTree = "<group>"; };
 		F7D77C461A58E005004F4499 /* EUExShakeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EUExShakeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21667F781D9A37C200F54C5D /* AppCanKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +108,6 @@
 		0938EB231CB35FA9008DDBBC /* engineHeader */ = {
 			isa = PBXGroup;
 			children = (
-				0938EB241CB35FA9008DDBBC /* EUExBase.h */,
 				0938EB251CB35FA9008DDBBC /* EUExBaseDefine.h */,
 				0938EB261CB35FA9008DDBBC /* EUtility.h */,
 			);
@@ -164,15 +156,7 @@
 		F7D1BE0B1A69FC7E0051CF50 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				F7D1BE0C1A69FC7E0051CF50 /* JSON.h */,
-				F7D1BE0D1A69FC7E0051CF50 /* JSONParser.h */,
-				F7D1BE0E1A69FC7E0051CF50 /* MD5Digest.h */,
-				F7D1BE0F1A69FC7E0051CF50 /* NSObject+SBJSON.h */,
-				F7D1BE101A69FC7E0051CF50 /* NSString+SBJSON.h */,
-				F7D1BE111A69FC7E0051CF50 /* SBJSON.h */,
-				F7D1BE121A69FC7E0051CF50 /* SBJsonBase.h */,
-				F7D1BE131A69FC7E0051CF50 /* SBJsonParser.h */,
-				F7D1BE141A69FC7E0051CF50 /* SBJsonWriter.h */,
+				21667F771D9A37C200F54C5D /* AppCanKit.framework */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -423,6 +407,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExShakeView/JSON",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = uexShakeView;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
@@ -434,6 +422,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExShakeView/JSON",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = uexShakeView;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
