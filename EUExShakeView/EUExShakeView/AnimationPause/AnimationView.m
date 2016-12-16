@@ -15,11 +15,7 @@
 }
 @synthesize imgUp;
 @synthesize imgDown;
-<<<<<<< HEAD
--(id)initWithFrame:(CGRect)frame backgroundImagePath:(NSString*)backgroundImagePath upImagePath:(NSString*)upImagePath downImagePath:(NSString*)downImagePath{
-=======
 -(id)initWithFrame:(CGRect)frame backgroundImagePath:(NSString*)backgroundImagePath upImagePath:(NSString*)upImagePath downImagePath:(NSString*)downImagePath imageWidth:(CGFloat)imageWidth imageHeight:(CGFloat)imageHeight{
->>>>>>> origin/dev-4.0
     if ( self = [super initWithFrame:frame]) {
         [self becomeFirstResponder];
         self.userInteractionEnabled = YES;
@@ -27,15 +23,6 @@
         float width = size.width;
         float heigh = size.height;
         UIImageView *bgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, heigh)];
-<<<<<<< HEAD
-         NSLog(@"self.backgroundImagePath:%@",backgroundImagePath);
-        if (backgroundImagePath) {
-            bgView.image = [UIImage imageWithContentsOfFile:backgroundImagePath];
-        }else{
-             bgView.image = [self imagesNamedFromCustomBundle:@"ShakeHideImg_women"];
-        }
-       
-=======
         NSLog(@"self.backgroundImagePath:%@",backgroundImagePath);
         if (backgroundImagePath) {
             bgView.image = [UIImage imageWithContentsOfFile:backgroundImagePath];
@@ -43,7 +30,6 @@
             bgView.image = [self imagesNamedFromCustomBundle:@"ShakeHideImg_women"];
         }
         
->>>>>>> origin/dev-4.0
         [self addSubview:bgView];
         UIView *view = [[UIView alloc] init];
         NSLog(@"height:%f",heigh);
@@ -57,21 +43,6 @@
         [bgView addSubview:view];
         NSString *path = [[EUtility bundleForPlugin:@"uexShakeView"] pathForResource:@"shake" ofType:@"wav"];
         AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:path], &soundID);
-<<<<<<< HEAD
-        imgUp = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width/2, heigh/4)];
-        if (upImagePath) {
-           imgUp.image = [UIImage imageWithContentsOfFile:upImagePath];
-        }else{
-           imgUp.image = [self imagesNamedFromCustomBundle:@"Shake_Logo_Up"];
-        }
-        
-        [view addSubview:imgUp];
-        imgDown = [[UIImageView alloc] initWithFrame:CGRectMake(0,  heigh/4, width/2,heigh/4)];
-        if (downImagePath) {
-            imgDown.image = [UIImage imageWithContentsOfFile:downImagePath];
-        }else{
-           imgDown.image = [self imagesNamedFromCustomBundle:@"Shake_Logo_Down"];
-=======
         imgUp = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, view.frame.size.width, view.frame.size.height/2)];
         if (upImagePath) {
             imgUp.image = [UIImage imageWithContentsOfFile:upImagePath];
@@ -85,7 +56,6 @@
             imgDown.image = [UIImage imageWithContentsOfFile:downImagePath];
         }else{
             imgDown.image = [self imagesNamedFromCustomBundle:@"Shake_Logo_Down"];
->>>>>>> origin/dev-4.0
         }
         
         [view addSubview:imgDown];
@@ -194,7 +164,6 @@
     NSString *img_path = [[bundle resourcePath]stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",imgName]];
     return [UIImage imageWithContentsOfFile:img_path];
 }
-
 @end
 
 
